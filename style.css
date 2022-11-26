@@ -1,0 +1,120 @@
+*{box-sizing: border-box;}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color:rgba(242, 242, 242, 1);
+    background-image: url(./img/background.png);
+    background-position: center;
+    background-size: cover;}
+
+#quizzFrame{
+    width: 464px;   
+    background-color: #FFF;
+}
+
+.btn{
+width: 400px;
+height: 56px;
+}
+.letter{
+    color: rgba(96, 102, 208, 0.8);
+    ;
+}
+
+footer{
+    font-size: .9rem;
+    
+}
+.title{
+    font-size: 2.2rem;
+}
+#question{
+    color:rgba(47, 82, 123, 1);
+}
+.answer{
+    
+    font-size: 1.1rem;
+    
+}
+#options button > span{
+    color: rgba(96, 102, 208, 0.8);
+}
+
+#options button{
+    border: 2px solid rgba(96, 102, 208, 0.7);
+
+}
+
+#options button:hover{    
+    background: rgba(249, 168, 38, 1);
+    border: 2px solid rgba(249, 168, 38, 1);    
+}
+#options button:hover > span{    
+    color :rgba(242, 242, 242, 1);   
+}
+
+.wrong{
+    background: rgba(234, 130, 130, 1);
+
+    border: 2px solid rgba(234, 130, 130, 1) !important; 
+}
+.wrong:hover{
+    background: rgba(234, 130, 130, 1) !important;
+
+    border: 2px solid rgb(231, 43, 43) !important; 
+}
+.wrong > span{
+    color :rgba(242, 242, 242, 1) !important; 
+}
+
+
+.correct{
+    background: rgba(96, 191, 136, 1);
+
+    border: 2px solid rgba(96, 191, 136, 1) !important; 
+}
+.correct:hover{
+    background: rgba(96, 191, 136, 1) !important;
+
+    border: 2px solid rgb(44, 138, 83) !important; 
+}
+ .correct > span{
+    color :rgba(242, 242, 242, 1) !important; 
+ }
+
+#next{
+    background-color: rgba(249, 168, 38, 1);
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 116px;
+    color: rgba(242, 242, 242, 1);
+}
+#next:hover{
+    border: 2px solid rgb(189, 128, 30);
+}
+.results-h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color:rgba(29, 53, 93, 1);
+
+}
+.results-text{
+    font-size: 1.1rem;
+    color: rgba(29, 53, 93, 1);
+}
+.results-text span{
+    font-size: 2.25rem;
+    color: rgba(111, 207, 151, 1);
+}
+
+#try-again{
+    background-color: #FFF;
+  color: rgba(29, 53, 93, 1);
+  border: 2px solid rgba(29, 53, 93, 1);
+}
+#try-again:hover{    
+    background: rgba(249, 168, 38, 1);
+    border: 2px solid rgba(249, 168, 38, 1);   
+    color: #FFF; 
+}
