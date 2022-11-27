@@ -36,7 +36,52 @@ function getRandomNumber(max){
 
 function getDB(){return DBGame}
 
-// function getRandomCapital{}
+function getRandomCapital(){
+    const number = getRandomNumber(DBGame.length);
+    const name = DBGame[number].name;
+    const capital = DBGame[number].capital;
+    
+    return {name,capital}
+}
+
+function getRandomFlag(){
+    const number = getRandomNumber(DBGame.length);
+    const name = DBGame[number].name;
+    const flag = DBGame[number].flag;
+    
+    return {name,flag}
+}
+
+function getCapitalOptions(){
+    const capitalQuestion = [];
+
+    for(let i = 0 ; i < 4; i++) capitalQuestion.push(getRandomCapital());
+   
+    return capitalQuestion;
+}
+
+function getFlagOptions(){
+    const flagQuestion = [];
+
+    for(let i = 0 ; i < 4; i++) flagQuestion.push(getRandomFlag());
+   
+    return flagQuestion;
+
+}
+function getQuestion(){
+    const randomNumber = getRandomNumber(2);
+    const quetions =[];
+    let typeQuestion =""
+
+    if (randomNumber === 1){
+        typeQuestion = "capital";
+        quetions.push(...getCapitalOptions());        
+    }else{
+        typeQuestion = "flag";
+        quetions.push(...getFlagOptions());
+    }   
+    
+    return {typeQuestion, quetions}}
 
 
- export default {initGameCore, getDB, getRandomNumber}
+ export default {initGameCore,getQuestion}

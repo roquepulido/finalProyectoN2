@@ -5,3 +5,13 @@ import gameCore from "./core_game.js";
 // console.log(countries);
 const countries = await fetch("./ExempleCountry.json").then(r=>r.json());
 gameCore.initGameCore(countries);
+
+console.log(gameCore.getQuestion());
+console.log(gameCore.getQuestion());
+console.log(gameCore.getQuestion());
+console.log(gameCore.getQuestion());
+console.log(gameCore.getQuestion());
+console.log(gameCore.getQuestion());
+console.log(gameCore.getQuestion());
+
+
