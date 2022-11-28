@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>&#127879; Quizz game!!! 	&#127879;</title>
+    <title>&#127879; Quizz game!!! &#127879;</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,10 +29,7 @@
     <main
       class="container vh-100 d-flex flex-column align-items-center justify-content-center"
     >
-      <div id="gameFrame">
-        
-        </div>
-      </div>
+      <div id="gameFrame"></div>
     </main>
 
     <footer
@@ -41,187 +38,222 @@
       created by <span class="fw-bold mx-1">roque.pulido</span> -
       devChallenges.io
     </footer>
-<!-- ------------------TEMPLATES---------------- -->
+
+    <!-- ------------------TEMPLATES---------------- -->
     <template id="game-flag">
-      
-        <h1 class="title fw-bold text-uppercase">Country quiz</h1>
+      <h1 class="title fw-bold text-uppercase">Country quiz</h1>
 
-        <div id="quizzFrame" class="position-relative rounded-5 pt-5">
+      <div id="quizzFrame" class="position-relative rounded-5 pt-5">
+        <img
+          class="position-absolute top-0 end-0 translate-middle-y"
+          src="./img/undraw_adventure_4hum 1.svg"
+          alt="adventure"
+        />
+        <div class="container pt-4">
           <img
-            class="position-absolute top-0 end-0 translate-middle-y"
-            src="./img/undraw_adventure_4hum 1.svg"
-            alt="adventure"
+            class="w-25 mb-3 ms-4"
+            src="https://flagcdn.com/pe.svg"
+            alt="Flag"
           />
-          <div class="container pt-4">
-            <img
-              class="w-25 mb-3 ms-4"
-              src="https://flagcdn.com/pe.svg"
-              alt="Flag"
-            />
-            <p class="fw-bold fs-4 ms-4" id="question">
-              Which country does this flag belong to?
-            </p>
-            <div id="options" class="row">
-              <button  id="q1"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
-              >
-                <span class="letter fs-4 me-5">A</span>
-                <span class="answer">Vietnam</span>
-              </button>
+          <p class="fw-bold fs-4 ms-4" id="question">
+            Which country does this flag belong to?
+          </p>
+          <div id="options" class="row">
+            <button
+              id="q1"
+              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
+            >
+              <span class="letter fs-4 me-5">A</span>
+              <span class="answer">Vietnam</span>
+            </button>
 
-              <button id="q2"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
+            <button
+              id="q2"
+              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
+            >
+              <span class="letter fs-4 me-5">B</span>
+              <span class="answer">Malaysia</span>
+            </button>
+            <button
+              id="q3"
+              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start correct position-relative"
+            >
+              <span class="letter fs-4 me-5">C</span>
+              <span class="answer">Sweden</span>
+              <span
+                class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
               >
-                <span class="letter fs-4 me-5">B</span>
-                <span class="answer">Malaysia</span>
-              </button>
-              <button id="q3"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start correct position-relative"
+                check_circle
+              </span>
+            </button>
+            <button
+              id="q4"
+              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start wrong position-relative"
+            >
+              <span class="letter fs-4 me-5">D</span>
+              <span class="answer">Austria</span>
+              <span
+                class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
               >
-                <span class="letter fs-4 me-5">C</span>
-                <span class="answer">Sweden</span>
-                <span
-                  class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-                >
-                  check_circle
-                </span>
-              </button>
-              <button id="q4"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start wrong position-relative"
-              >
-                <span class="letter fs-4 me-5">D</span>
-                <span class="answer">Austria</span>
-                <span
-                  class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-                >
-                  cancel
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="row justify-content-end">
-            <button class="btn text-center me-5 my-4" id="next">Next</button>
+                cancel
+              </span>
+            </button>
           </div>
         </div>
-      
+        <div class="row justify-content-end">
+          <button class="btn text-center me-5 my-4" id="next">Next</button>
+        </div>
+      </div>
     </template>
 
     <template id="game-word">
       <!-- TEMPLATE WORD QUESTION -->
-      
-        <h1 class="title fw-bold text-uppercase">Country quiz</h1>
 
-        <div id="quizzFrame" class="position-relative rounded-5 pt-5">
-          <img
-            class="position-absolute top-0 end-0 translate-middle-y"
-            src="./img/undraw_adventure_4hum 1.svg"
-            alt="adventure"
-          />
-          <div class="container pt-4">
-            <p class="fw-bold fs-4 text-center" id="question">
-              Kuala Lumpur is the capital of
-            </p>
-            <div id="options" class="row">
-              <button
-                id="q1"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
-              >
-                <span class="letter fs-4 me-5"> A </span>
-                <span class="answer">Vietnam</span>
-              </button>
+      <h1 class="title fw-bold text-uppercase">Country quiz</h1>
 
-              <button
-                id="q2"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
-              >
-                <span class="letter fs-4 me-5"> B </span>
-                <span class="answer"> Malaysia </span>
-              </button>
+      <div id="quizzFrame" class="position-relative rounded-5 pt-5">
+        <img
+          class="position-absolute top-0 end-0 translate-middle-y"
+          src="./img/undraw_adventure_4hum 1.svg"
+          alt="adventure"
+        />
+        <div class="container pt-4">
+          <p class="fw-bold fs-4 text-center" id="question">
+            Kuala Lumpur is the capital of
+          </p>
+          <div id="options" class="row">
+            <button
+              id="q1"
+              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
+            >
+              <span class="letter fs-4 me-5"> A </span>
+              <span class="answer">Vietnam</span>
+            </button>
 
-              <button
-                id="q3"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start correct position-relative"
-              >
-                <span class="letter fs-4 me-5">C</span>
-                <span class="answer">Sweden</span>
-                <span
-                  class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-                >
-                  check_circle
-                </span>
-              </button>
+            <button
+              id="q2"
+              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
+            >
+              <span class="letter fs-4 me-5"> B </span>
+              <span class="answer"> Malaysia </span>
+            </button>
 
-              <button
-                id="q4"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start wrong position-relative"
+            <button
+              id="q3"
+              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start correct position-relative"
+            >
+              <span class="letter fs-4 me-5">C</span>
+              <span class="answer">Sweden</span>
+              <span
+                class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
               >
-                <span class="letter fs-4 me-5">D</span>
-                <span class="answer">Austria</span>
-                <span
-                  class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-                >
-                  cancel
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="row justify-content-end">
-            <button class="btn text-center me-5 my-4" id="next">Next</button>
+                check_circle
+              </span>
+            </button>
+
+            <button
+              id="q4"
+              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start wrong position-relative"
+            >
+              <span class="letter fs-4 me-5">D</span>
+              <span class="answer">Austria</span>
+              <span
+                class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
+              >
+                cancel
+              </span>
+            </button>
           </div>
         </div>
-      
+        <div class="row justify-content-end">
+          <button class="btn text-center me-5 my-4" id="next">Next</button>
+        </div>
+      </div>
+
       <!-- END TEMPLATE WORD QUESTION -->
     </template>
 
+    <!--  TEMPLATE WIN QUESTION -->
     <template id="win">
-      <!--  TEMPLATE WIN QUESTION -->
-      
-        <h1 class="title fw-bold text-uppercase">Country quiz</h1>
+      <h1 class="title fw-bold text-uppercase">Country quiz</h1>
 
-        <div
-          id="quizzFrame"
-          class="row rounded-5 pt-5 justify-content-center gap-5"
-        >
-          <img class="w-50" src="./img/undraw_winners_ao2o 2.svg" alt="Win" />
-          <div class="text-center">
-            <h1 class="results-h1">Results</h1>
-            <p class="results-text">
-              You got <span class="fw-bold">4</span> correct answers
-            </p>
-          </div>
-          <button class="btn text-center w-50 mb-5" id="try-again">
-            Try again
-          </button>
+      <div
+        id="quizzFrame"
+        class="row rounded-5 pt-5 justify-content-center gap-5"
+      >
+        <img class="w-50" src="./img/undraw_winners_ao2o 2.svg" alt="Win" />
+        <div class="text-center">
+          <h1 class="results-h1">Results</h1>
+          <p class="results-text">
+            You got <span class="fw-bold">4</span> correct answers
+          </p>
         </div>
-      
-      <!--  END TEMPLATE WIN QUESTION -->
+        <button class="btn text-center w-50 mb-5" id="try-again">
+          Try again
+        </button>
+      </div>
     </template>
+    <!--  END TEMPLATE WIN QUESTION -->
 
     <template id="buttonOption">
-      <button class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start">
-                <span class="letter fs-4 me-5"></span>
-                <span class="answer"></span>
-              </button>
+      <button class="btn btn-outline-primary mx-auto rounded-4 text-start">
+        <div class="row">
+          <div class="col-2 d-flex align-items-center">
+            <span class="letter fs-4 "></span>
+          </div>
+          <div class="col d-flex align-items-center">
+            <span class="answer"></span>
+          </div>
+        </div>
+      </button>
     </template>
+
     <template id="capitalQ">
       <h1 class="title fw-bold text-uppercase">Country quiz</h1>
 
-        <div id="quizzFrame" class="position-relative rounded-5 pt-5">
-          <img
-            class="position-absolute top-0 end-0 translate-middle-y"
-            src="./img/undraw_adventure_4hum 1.svg"
-            alt="adventure"
-          />
-          <div class="container pt-4">
-            <p class="fw-bold fs-4 text-center" id="question"></p>
-            <div id="options" class="row">
-            </div>
-          </div>
-          <div class="row justify-content-end">
-            <button class="btn text-center me-5 my-4 visually-hidden" id="next">Next</button>
-          </div>
+      <div id="quizzFrame" class="position-relative rounded-5 pt-5">
+        <img
+          class="position-absolute top-0 end-0 translate-middle-y"
+          src="./img/undraw_adventure_4hum 1.svg"
+          alt="adventure"
+        />
+        <div class="container pt-4">
+          <p class="fw-bold fs-4 text-center" id="question"></p>
+          <div id="options" class="row gap-4 my-4"></div>
         </div>
+        <div class="row justify-content-end">
+          <button class="btn text-center me-5 my-4 visually-hidden" id="next">
+            Next
+          </button>
+        </div>
+      </div>
     </template>
+
+    <template id="flagQ">
+      <h1 class="title fw-bold text-uppercase">Country quiz</h1>
+
+      <div id="quizzFrame" class="position-relative rounded-5 pt-5">
+        <img
+          class="position-absolute top-0 end-0 translate-middle-y"
+          src="./img/undraw_adventure_4hum 1.svg"
+          alt="adventure"
+        />
+        <div class="container pt-4">
+          <img id="flagIMG" class="w-25 mb-3 ms-4" src="" alt="Flag" />
+          <p class="fw-bold fs-4 ms-4" id="question">
+            Which country does this flag belong to?
+          </p>
+          <div id="options" class="row gap-4 my-4"></div>
+        </div>
+        <div class="row justify-content-end">
+          <button class="btn text-center me-5 my-4 visually-hidden" id="next">
+            Next
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <!-- -----------------------END TEMPLATES---------------------- -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

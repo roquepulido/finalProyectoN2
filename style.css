@@ -1,5 +1,3 @@
-*{box-sizing: border-box;}
-
 body{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -16,9 +14,9 @@ body{
 .btn{
 width: 400px;
 }
+
 .letter{
     color: rgba(96, 102, 208, 0.8);
-    ;
 }
 
 footer{
@@ -32,11 +30,10 @@ footer{
     color:rgba(47, 82, 123, 1);
 }
 .answer{
-    
     font-size: 1.1rem;
     
 }
-#options button > span{
+#options span{
     color: rgba(96, 102, 208, 0.8);
 }
 
@@ -49,8 +46,8 @@ footer{
     background: rgba(249, 168, 38, 1);
     border: 2px solid rgba(249, 168, 38, 1);    
 }
-#options button:hover > span{    
-    color :rgba(242, 242, 242, 1);   
+#options button:hover span{    
+    color :rgba(242, 242, 242, 1) !important;   
 }
 
 .wrong{
