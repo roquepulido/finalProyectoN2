@@ -60,7 +60,21 @@ footer{
 
     border: 2px solid rgb(231, 43, 43) !important; 
 }
-.wrong > span{
+.wrong  span{
+    color :rgba(242, 242, 242, 1) !important; 
+}
+
+.wrong.disabled{
+    background: rgba(234, 130, 130, 1);
+
+    border: 2px solid rgba(234, 130, 130, 1) !important; 
+}
+.wrong:hover.disabled{
+    background: rgba(234, 130, 130, 1) !important;
+
+    border: 2px solid rgb(231, 43, 43) !important; 
+}
+.wrong.disabled  span{
     color :rgba(242, 242, 242, 1) !important; 
 }
 
@@ -75,7 +89,21 @@ footer{
 
     border: 2px solid rgb(44, 138, 83) !important; 
 }
- .correct > span{
+ .correct  span{
+    color :rgba(242, 242, 242, 1) !important; 
+ }
+
+ .correct.disabled{
+    background: rgba(96, 191, 136, 1);
+
+    border: 2px solid rgba(96, 191, 136, 1) !important; 
+}
+.correct:hover.disabled{
+    background: rgba(96, 191, 136, 1) !important;
+
+    border: 2px solid rgb(44, 138, 83) !important; 
+}
+ .correct.disabled  span{
     color :rgba(242, 242, 242, 1) !important; 
  }
 

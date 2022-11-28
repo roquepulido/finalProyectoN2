@@ -18,7 +18,7 @@ function getRandomNumber(max){
 
 function printFlagQTemplate(arrayPaises, nodo){
     const correctPosition = getRandomNumber(4);
-    const correctCountry = arrayPaises[correctPosition].name;
+    // const correctCountry = arrayPaises[correctPosition].name;
     const correctFlag = arrayPaises[correctPosition].flag;
     const nodoPregunta = document.importNode(Templates.flag.content,true);
     const nodoOptions = nodoPregunta.getElementById("options");
@@ -34,16 +34,20 @@ function printFlagQTemplate(arrayPaises, nodo){
         nodoOptions.appendChild(nodoButton);
         
     }
+    const buttons = nodoOptions.querySelectorAll("button");
+    buttons.forEach((button,i) => { button.setAttribute("value",i)
+        
+    });
     nodo.appendChild(nodoPregunta)
     
-    return correctCountry;
+    return correctPosition;
 
 }
 
 
 function printCapitalQTemplate(arrayPaises, nodo){
     const correctPosition = getRandomNumber(4);
-    const correctCountry = arrayPaises[correctPosition].name;
+    // const correctCountry = arrayPaises[correctPosition].name;
     const correctCapital = arrayPaises[correctPosition].capital;
     const nodoPregunta = document.importNode(Templates.capital.content,true);
     const nodoOptions = nodoPregunta.getElementById("options");
@@ -59,9 +63,15 @@ function printCapitalQTemplate(arrayPaises, nodo){
         nodoOptions.appendChild(nodoButton);
         
     }
+    const buttons = nodoOptions.querySelectorAll("button");
+    buttons.forEach((button,i) => { button.setAttribute("value",i)
+        
+    });
+
+    
     nodo.appendChild(nodoPregunta)
     
-    return correctCountry;
+    return correctPosition;
 }
 
 function getTemplates(){

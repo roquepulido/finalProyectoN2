@@ -40,139 +40,7 @@
     </footer>
 
     <!-- ------------------TEMPLATES---------------- -->
-    <template id="game-flag">
-      <h1 class="title fw-bold text-uppercase">Country quiz</h1>
-
-      <div id="quizzFrame" class="position-relative rounded-5 pt-5">
-        <img
-          class="position-absolute top-0 end-0 translate-middle-y"
-          src="./img/undraw_adventure_4hum 1.svg"
-          alt="adventure"
-        />
-        <div class="container pt-4">
-          <img
-            class="w-25 mb-3 ms-4"
-            src="https://flagcdn.com/pe.svg"
-            alt="Flag"
-          />
-          <p class="fw-bold fs-4 ms-4" id="question">
-            Which country does this flag belong to?
-          </p>
-          <div id="options" class="row">
-            <button
-              id="q1"
-              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
-            >
-              <span class="letter fs-4 me-5">A</span>
-              <span class="answer">Vietnam</span>
-            </button>
-
-            <button
-              id="q2"
-              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
-            >
-              <span class="letter fs-4 me-5">B</span>
-              <span class="answer">Malaysia</span>
-            </button>
-            <button
-              id="q3"
-              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start correct position-relative"
-            >
-              <span class="letter fs-4 me-5">C</span>
-              <span class="answer">Sweden</span>
-              <span
-                class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-              >
-                check_circle
-              </span>
-            </button>
-            <button
-              id="q4"
-              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start wrong position-relative"
-            >
-              <span class="letter fs-4 me-5">D</span>
-              <span class="answer">Austria</span>
-              <span
-                class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-              >
-                cancel
-              </span>
-            </button>
-          </div>
-        </div>
-        <div class="row justify-content-end">
-          <button class="btn text-center me-5 my-4" id="next">Next</button>
-        </div>
-      </div>
-    </template>
-
-    <template id="game-word">
-      <!-- TEMPLATE WORD QUESTION -->
-
-      <h1 class="title fw-bold text-uppercase">Country quiz</h1>
-
-      <div id="quizzFrame" class="position-relative rounded-5 pt-5">
-        <img
-          class="position-absolute top-0 end-0 translate-middle-y"
-          src="./img/undraw_adventure_4hum 1.svg"
-          alt="adventure"
-        />
-        <div class="container pt-4">
-          <p class="fw-bold fs-4 text-center" id="question">
-            Kuala Lumpur is the capital of
-          </p>
-          <div id="options" class="row">
-            <button
-              id="q1"
-              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
-            >
-              <span class="letter fs-4 me-5"> A </span>
-              <span class="answer">Vietnam</span>
-            </button>
-
-            <button
-              id="q2"
-              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
-            >
-              <span class="letter fs-4 me-5"> B </span>
-              <span class="answer"> Malaysia </span>
-            </button>
-
-            <button
-              id="q3"
-              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start correct position-relative"
-            >
-              <span class="letter fs-4 me-5">C</span>
-              <span class="answer">Sweden</span>
-              <span
-                class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-              >
-                check_circle
-              </span>
-            </button>
-
-            <button
-              id="q4"
-              class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start wrong position-relative"
-            >
-              <span class="letter fs-4 me-5">D</span>
-              <span class="answer">Austria</span>
-              <span
-                class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-              >
-                cancel
-              </span>
-            </button>
-          </div>
-        </div>
-        <div class="row justify-content-end">
-          <button class="btn text-center me-5 my-4" id="next">Next</button>
-        </div>
-      </div>
-
-      <!-- END TEMPLATE WORD QUESTION -->
-    </template>
-
+    
     <!--  TEMPLATE WIN QUESTION -->
     <template id="win">
       <h1 class="title fw-bold text-uppercase">Country quiz</h1>
@@ -196,7 +64,7 @@
     <!--  END TEMPLATE WIN QUESTION -->
 
     <template id="buttonOption">
-      <button class="btn btn-outline-primary mx-auto rounded-4 text-start">
+      <button class="btn btn-outline-primary mx-auto rounded-4 text-start" type="submit" >
         <div class="row">
           <div class="col-2 d-flex align-items-center">
             <span class="letter fs-4 "></span>
@@ -204,7 +72,18 @@
           <div class="col d-flex align-items-center">
             <span class="answer"></span>
           </div>
+          <div class="col-1 me-3 d-flex align-items-center">
+            <span class="cancel material-symbols-outlined visually-hidden">
+              cancel
+            </span>
+        <span class="check material-symbols-outlined visually-hidden">
+              check_circle
+            </span>
+          </div>
+
+
         </div>
+        
       </button>
     </template>
 
@@ -219,7 +98,7 @@
         />
         <div class="container pt-4">
           <p class="fw-bold fs-4 text-center" id="question"></p>
-          <div id="options" class="row gap-4 my-4"></div>
+          <form id="options" class="row gap-4 my-4"></form>
         </div>
         <div class="row justify-content-end">
           <button class="btn text-center me-5 my-4 visually-hidden" id="next">
@@ -243,7 +122,7 @@
           <p class="fw-bold fs-4 ms-4" id="question">
             Which country does this flag belong to?
           </p>
-          <div id="options" class="row gap-4 my-4"></div>
+          <form id="options" class="row gap-4 my-4"></form>
         </div>
         <div class="row justify-content-end">
           <button class="btn text-center me-5 my-4 visually-hidden" id="next">
