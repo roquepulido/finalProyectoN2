@@ -84,4 +84,4 @@ function getQuestion(){
     return {typeQuestion, quetions}}
 
 
- export default {initGameCore,getQuestion}
+ export default {initGameCore,getQuestion,getRandomNumber}

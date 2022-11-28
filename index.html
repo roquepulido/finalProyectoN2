@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>&#127879; Quizz game!!! 	&#127879;</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,70 +29,10 @@
     <main
       class="container vh-100 d-flex flex-column align-items-center justify-content-center"
     >
-      <!-- TEMPLATE QUESTION -->
-      <div class="">
-        <h1 class="title fw-bold text-uppercase">Country quiz</h1>
-
-        <div id="quizzFrame" class="position-relative rounded-5 pt-5">
-          <img
-            class="position-absolute top-0 end-0 translate-middle-y"
-            src="./img/undraw_adventure_4hum 1.svg"
-            alt="adventure"
-          />
-          <div class="container pt-4">
-            <p class="fw-bold fs-4 text-center" id="question">
-              Kuala Lumpur is the capital of
-            </p>
-            <div id="options" class="row">
-              <button
-                id="q1"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
-              >
-                <span class="letter fs-4 me-5"> A </span>
-                <span class="answer">Vietnam</span>
-              </button>
-
-              <button
-                id="q2"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start"
-              >
-                <span class="letter fs-4 me-5"> B </span>
-                <span class="answer"> Malaysia </span>
-              </button>
-
-              <button
-                id="q3"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start correct position-relative"
-              >
-                <span class="letter fs-4 me-5">C</span>
-                <span class="answer">Sweden</span>
-                <span
-                  class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-                >
-                  check_circle
-                </span>
-              </button>
-
-              <button
-                id="q4"
-                class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start wrong position-relative"
-              >
-                <span class="letter fs-4 me-5">D</span>
-                <span class="answer">Austria</span>
-                <span
-                  class="material-symbols-outlined position-absolute end-0 me-2 mt-2"
-                >
-                  cancel
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="row justify-content-end">
-            <button class="btn text-center me-5 my-4" id="next">Next</button>
-          </div>
+      <div id="gameFrame">
+        
         </div>
       </div>
-      <!-- END TEMPLATE  QUESTION -->
     </main>
 
     <footer
@@ -101,9 +41,9 @@
       created by <span class="fw-bold mx-1">roque.pulido</span> -
       devChallenges.io
     </footer>
-
+<!-- ------------------TEMPLATES---------------- -->
     <template id="game-flag">
-      <div class="">
+      
         <h1 class="title fw-bold text-uppercase">Country quiz</h1>
 
         <div id="quizzFrame" class="position-relative rounded-5 pt-5">
@@ -163,12 +103,12 @@
             <button class="btn text-center me-5 my-4" id="next">Next</button>
           </div>
         </div>
-      </div>
+      
     </template>
 
     <template id="game-word">
       <!-- TEMPLATE WORD QUESTION -->
-      <div class="">
+      
         <h1 class="title fw-bold text-uppercase">Country quiz</h1>
 
         <div id="quizzFrame" class="position-relative rounded-5 pt-5">
@@ -229,13 +169,13 @@
             <button class="btn text-center me-5 my-4" id="next">Next</button>
           </div>
         </div>
-      </div>
+      
       <!-- END TEMPLATE WORD QUESTION -->
     </template>
 
     <template id="win">
       <!--  TEMPLATE WIN QUESTION -->
-      <div class="">
+      
         <h1 class="title fw-bold text-uppercase">Country quiz</h1>
 
         <div
@@ -253,10 +193,35 @@
             Try again
           </button>
         </div>
-      </div>
+      
       <!--  END TEMPLATE WIN QUESTION -->
     </template>
 
+    <template id="buttonOption">
+      <button class="btn btn-outline-primary my-3 mx-auto rounded-4 text-start">
+                <span class="letter fs-4 me-5"></span>
+                <span class="answer"></span>
+              </button>
+    </template>
+    <template id="capitalQ">
+      <h1 class="title fw-bold text-uppercase">Country quiz</h1>
+
+        <div id="quizzFrame" class="position-relative rounded-5 pt-5">
+          <img
+            class="position-absolute top-0 end-0 translate-middle-y"
+            src="./img/undraw_adventure_4hum 1.svg"
+            alt="adventure"
+          />
+          <div class="container pt-4">
+            <p class="fw-bold fs-4 text-center" id="question"></p>
+            <div id="options" class="row">
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <button class="btn text-center me-5 my-4 visually-hidden" id="next">Next</button>
+          </div>
+        </div>
+    </template>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
