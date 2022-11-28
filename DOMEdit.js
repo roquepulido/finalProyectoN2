@@ -5,6 +5,7 @@ function initTemplates(){
     setTemplate("capital","capitalQ");
     setTemplate("button","buttonOption");
     setTemplate("flag","flagQ");
+    setTemplate("win","win");
 }
 
 function setTemplate(name, id){
@@ -74,8 +75,16 @@ function printCapitalQTemplate(arrayPaises, nodo){
     return correctPosition;
 }
 
+function printWin(nodo, puntos){
+    const nodoWin = document.importNode(Templates.win.content,true);
+    const spanPoints = nodoWin.getElementById("totalPoints");
+
+    spanPoints.innerHTML = puntos;
+    nodo.appendChild(nodoWin);
+}
+
 function getTemplates(){
     return Templates;
 }
 
-export default {printCapitalQTemplate, getTemplates, setTemplate, initTemplates, printFlagQTemplate}
+export default {printCapitalQTemplate, getTemplates, setTemplate, initTemplates, printFlagQTemplate, printWin}

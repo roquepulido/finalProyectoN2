@@ -2,12 +2,12 @@ import r from "./request.js";
 import gameCore from "./core_game.js";
 import DOMEdit from "./DOMEdit.js";
 
-// const countries = await r.getCountries();
+const countries = await r.getCountries();
 // console.log(countries);
-const countries = await fetch("./ExempleCountry.json").then(r => r.json());
+// const countries = await fetch("./ExempleCountry.json").then(r => r.json());
 let points = 0;
 let correctOption = 0;
-const numberQuertions = 5;
+const numberQuertions = 10;
 let actualGame = 1;
 const gameFrame = document.getElementById("gameFrame");
 const nextGame = () => {
@@ -16,6 +16,7 @@ const nextGame = () => {
 };
 const gameReset = () =>{
     actualGame = 1;
+    points = 0;
     game();
 }
 const checkAnswer = e => {
@@ -58,18 +59,23 @@ const checkAnswer = e => {
 function game() {
     gameFrame.innerHTML = "";
     if (actualGame <= numberQuertions) {
-        console.log(`Puntos:${points} - turno: ${actualGame}`);
+       
         correctOption = getQuestion("gameFrame");
-        console.log(correctOption);
+        
 
         document.addEventListener("submit", checkAnswer);
     } else {
-        // poner el win
+       getWin("gameFrame");
+       document.getElementById("try-again").addEventListener("click",gameReset);
     }
 
 }
 
+function getWin(id){
+    let nodo = document.getElementById(id);
+    DOMEdit.printWin(nodo, points);
 
+}
 function getQuestion(id) {
     let quetion = gameCore.getQuestion();
 
